@@ -21,6 +21,7 @@ namespace Rem
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
+        ///Called when changin status. Change text color and status and update the database
         async void OnStatusChange(object sender, EventArgs e)
         {
 

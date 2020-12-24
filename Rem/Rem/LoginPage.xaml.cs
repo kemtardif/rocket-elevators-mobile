@@ -16,6 +16,8 @@ namespace Rem
         {
             var vm = new LoginViewModel();
             this.BindingContext = vm;
+
+            ///Take care of displaying error message 
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);

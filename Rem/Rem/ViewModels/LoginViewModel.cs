@@ -9,6 +9,9 @@ using Rem.Models;
 
 namespace Rem.ViewModels
 {
+    /// <summary>
+    /// Biew Model used for the login
+    /// </summary>
     public class LoginViewModel : INotifyPropertyChanged
     {
         public Action DisplayInvalidLoginPrompt;
@@ -29,6 +32,12 @@ namespace Rem.ViewModels
         {
             SubmitCommand = new Command(OnSubmit);
         }
+
+        /// <summary>
+        /// 
+        ///Call when login In, this call the api, which return list of employee emails, and we check if 
+        ///the entered email 
+        /// </summary>
         async public void OnSubmit()
         {
             var _RESTHelper = new RESTHelper();

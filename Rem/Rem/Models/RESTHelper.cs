@@ -9,6 +9,8 @@ using System.Diagnostics;
 
 namespace Rem.Models
 {
+
+    // Helper used to call the REST API, making the code cleaner
     class RESTHelper
     {
 
@@ -21,6 +23,7 @@ namespace Rem.Models
 
         }
 
+           ///GET REQUEST
         public async Task<String> get(string url)
         {
             var response = string.Empty;
@@ -37,7 +40,7 @@ namespace Rem.Models
 
             return response;
         }
-
+        ///PUT REQUEST
         public async Task<HttpResponseMessage> put(string url)
         {
             HttpResponseMessage response = await _client.PutAsync(url, null);

@@ -26,6 +26,7 @@ namespace Rem
             Elevators.Clear();
             _RESTHelper = new RESTHelper();
 
+            /////Call api to display the elevators not in operations
 
             var url = "https://rocket-elevators-foundation-restapi.azurewebsites.net/api/Elevators/GetelevatorsStatus";
 
