@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rem.ElevatorStatus">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Elevator Informations"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Change Status"
+                    Clicked="OnStatusChange"
+                    BindingContext="{Binding id}"/>
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                           Text="ID:"
+                           FontAttributes="Bold" />
+                <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding id}"
+                           VerticalOptions="End" />
+            </Grid>
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                           Text="Status:"
+                           FontAttributes="Bold" />
+                <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding status}" 
+                       TextColor="{Binding TextColor}"
+                           VerticalOptions="End" />
+    
+            </Grid>
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                           Text="Serial Number:"
+                           FontAttributes="Bold" />
+                <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding serial_number}" 
+                           VerticalOptions="End" />
+            </Grid>
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                           Text="Date of last inspection:"
+                           FontAttributes="Bold" />
+                <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding date_last_inspection}" 
+                           VerticalOptions="End" />
+            </Grid>
+            <Button Text="Back to Main Page"
+                    Clicked="MainPage"/>
+            <Button Text="Logout"
+                    Clicked="Logout"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
